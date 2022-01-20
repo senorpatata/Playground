@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  translator-api:
+    container_name: translator-api
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    depends_on: 
+      - mssql
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://*:5000
+    ports:
+      - 5000:5000
+      - 5001:5001
+    networks:
+      - translator-cqrs
+
+  mssql:
+    container_name: mssql_linux
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment: 
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Demo123456@
+    ports:
+      - 1433:1433
+    networks:
+      - translator-cqrs
+
+networks:
+  translator-cqrs:
+    driver: bridge

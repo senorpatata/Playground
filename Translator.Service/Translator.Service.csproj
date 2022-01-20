@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <LangVersion>7.3</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="8.1.1" />
+      <PackageReference Include="HtmlAgilityPack" Version="1.11.39" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Translator.Data\Translator.Data.csproj" />
+      <ProjectReference Include="..\Translator.Domain\Translator.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

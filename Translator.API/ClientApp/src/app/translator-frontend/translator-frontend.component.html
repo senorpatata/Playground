@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-12 col-md-5">
+    <div class="col-12 w-100 p-0">
+      <select [(ngModel)]="model.originLang">
+        <option *ngFor="let l of model.availableLanguages" [ngValue]="l">{{l}}</option>
+      </select>
+    </div>
+    <div class="col-12 w-100 p-0">
+      <textarea [(ngModel)]="model.originText" class="w-100"></textarea>
+    </div>
+  </div>
+  <div class="col-12 col-md-2 d-flex justify-content-center">
+    <button (click)="doReverse()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">< ></span>
+    </button>
+  </div>
+  <div class="col-12 col-md-5">
+    <div class="col-12 w-100 p-0">
+      <select [(ngModel)]="model.targetLang">
+        <option *ngFor="let l of model.availableLanguages" [ngValue]="l">{{l}}</option>
+      </select>
+    </div>
+    <div class="col-12 w-100 p-0">
+      <textarea [(ngModel)]="model.targetText" class="w-100"></textarea>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button (click)="doTranslation()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">Translate</span>
+    </button>
+  </div>
+</div>
