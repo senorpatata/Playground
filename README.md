@@ -1,5 +1,5 @@
 # Translator
-## This solution is based on a C# Project for teaching C# at Vinfoval (where I work)
+## This solution is based on a C# Project for teaching C# at Vinfoval
 ## Is also on a CRQS project by @ducmeit, adding Angular frontend
 ## For this project I've removed console applications, other unit testing
 ## In other words: It's kind of my playground. It's nothing formal, but I try to keep always the code clean.
